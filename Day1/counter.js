@@ -86,12 +86,10 @@ console.log(`${obj3(200, 60)}`); //output 160
 function createRateLimiter(fn, maxCalls, windowMs) {
   let calls = [];
   return (...args) => {
-    console.log(args);
     const now = new Date();
     calls = calls.filter((call) => now - call < windowMs);
     if (calls.length < maxCalls) {
       calls.push(now);
-      console.log(calls);
       return fn(args);
     } else {
       console.log("Cant proceed your request\n");
@@ -99,7 +97,6 @@ function createRateLimiter(fn, maxCalls, windowMs) {
   };
 }
 const multiply = function (args) {
-  console.log(`in function ${args}`);
   let [arg1, arg2] = args;
   console.log(arg1 * arg2);
 };
