@@ -3,7 +3,7 @@
 ## == and ===
 
 **==** Used just for value comparison but **===** used for bothvalue and type comparison
-\*\*eg:
+**eg:**
 '5'==5 returns true;
 '5'===5 returns false
 
