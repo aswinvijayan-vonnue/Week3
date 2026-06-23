@@ -20,6 +20,7 @@ let a = 10,
 let b;
 let c = null;
 let sym = Symbol('abc');
+const bignum = BigInt(344657885997);
 
 console.log('Primitive Types');
 console.log(a, typeof a); //number
@@ -28,6 +29,7 @@ console.log(b, typeof b); //undefined
 console.log(val, typeof val); //boolean
 console.log(c, typeof c); //null
 console.log(sym, typeof sym); //symbol
+console.log(bignum, typeof bignum); //BigInt
 
 let arr = new Array();
 console.log('arr ', typeof arr); //object
