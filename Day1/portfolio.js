@@ -52,6 +52,15 @@ function removeCard(id){
         console.log(`card with id=${id}removed`);
     }
 }
+function clearAllCards(card){
+    const cards=document.querySelectorAll(card);
+    for(cd of cards){
+        cd.remove();
+        console.log("card removed");
+    }
+
+
+}
 addCard(
      "Cat",
      "Cat walking ",
@@ -66,4 +75,5 @@ addCard(
      "card2"
    
  )
-removeCard("card1")
+removeCard("card1");
+clearAllCards(".card")
