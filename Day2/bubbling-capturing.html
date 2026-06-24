@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bubbling-capturing.css">
+    <script src="./bubbling-capturing.js" defer></script>
+</head>
+<body>
+    <h1>Bubbling</h1>
+    <div id="grandparent">
+        <div id="parent">
+            <div id="child"></div>
+        </div>
+    </div>
+    <h1>Capturing</h1>
+    <div id="cgrandparent">
+        <div id="cparent">
+            <div id="cchild"></div>
+        </div>
+    </div>
+    <h1>Stop Propagation</h1>
+    <div id="sgparent">
+        <div id="sparent">
+            <div id="schild"></div>
+        </div>
+    </div>
+    <h1>Stop Immediate propagation</h1>
+    <div class="container">
+    <button class="immediate">Click here</button>
+    </div>
+    <h1>prevent default</h1>
+    <form action="" id="name-form">
+        <label for="name">name</label>
+        <input type="text" id="name">
+        <input type="submit">
+    </form>
+    <a href="https://www.google.com/" id="google">google</a>
+</body>
+</html>
