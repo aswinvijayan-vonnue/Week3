@@ -1,0 +1,15 @@
+div{
+    min-width: 100px;
+    min-height: 100px;
+    border: 1px solid black;
+    padding: 100px;
+}
+button{
+    min-width: 50px;
+    min-height: 50px;
+    background-color: aqua;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
