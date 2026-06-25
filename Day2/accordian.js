@@ -1,7 +1,7 @@
 let buttons = document.querySelectorAll(".header-button");
 let key=sessionStorage.getItem("openat");
 console.log(key);
-if(key>=0){
+if(key !=null && key>=0){
      const panel=buttons[key].nextElementSibling;
      panel.classList.add("active");
      buttons[key].parentElement.setAttribute("aria-expanded","true");
@@ -17,7 +17,8 @@ buttons.forEach((button, index) => {
     if(isopen){
         sessionStorage.setItem("openat",index);
         console.log(`stored ${sessionStorage.getItem("openat")}`);
-    }
+    }else
+        sessionStorage.removeItem("openat");
     console.log(panel);
     console.log(buttons.length);
     for (let i = 0; i < buttons.length; i++) {
