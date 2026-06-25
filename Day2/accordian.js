@@ -1,12 +1,11 @@
 let buttons = document.querySelectorAll(".header-button");
-let key=sessionStorage.getItem("openat");
+let key = sessionStorage.getItem("openat");
 console.log(key);
-if(key !=null && key>=0){
-     const panel=buttons[key].nextElementSibling;
-     panel.classList.add("active");
-     buttons[key].parentElement.setAttribute("aria-expanded","true");
-
- }
+if (key != null && key >= 0) {
+  const panel = buttons[key].nextElementSibling;
+  panel.classList.add("active");
+  buttons[key].parentElement.setAttribute("aria-expanded", "true");
+}
 buttons.forEach((button, index) => {
   button.addEventListener("click", function (event) {
     let panel = this.nextElementSibling;
@@ -14,11 +13,10 @@ buttons.forEach((button, index) => {
     panel.classList.toggle("active");
     const isopen = panel.classList.contains("active");
     this.parentElement.setAttribute("aria-expanded", isopen);
-    if(isopen){
-        sessionStorage.setItem("openat",index);
-        console.log(`stored ${sessionStorage.getItem("openat")}`);
-    }else
-        sessionStorage.removeItem("openat");
+    if (isopen) {
+      sessionStorage.setItem("openat", index);
+      console.log(`stored ${sessionStorage.getItem("openat")}`);
+    } else sessionStorage.removeItem("openat");
     console.log(panel);
     console.log(buttons.length);
     for (let i = 0; i < buttons.length; i++) {
