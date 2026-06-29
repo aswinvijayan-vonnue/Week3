@@ -30,27 +30,27 @@ class FormValidator {
           break;
         case "minLength":
           if (field.value.length < fieldRules[rule]) {
-            if(!span.classList.contains("is-invalid")){
-                span.textContent = "minimum length should be " + fieldRules[rule];
-                span.classList.add("is-invalid");
+            if (!span.classList.contains("is-invalid")) {
+              span.textContent = "minimum length should be " + fieldRules[rule];
+              span.classList.add("is-invalid");
             }
             flag = 1;
           }
           break;
         case "maxLength":
           if (field.value.length > fieldRules[rule]) {
-            if(!span.classList.contains("is-invalid")){
-                span.textContent = "minimum length should be " + fieldRules[rule];
-                span.classList.add("is-invalid");
+            if (!span.classList.contains("is-invalid")) {
+              span.textContent = "minimum length should be " + fieldRules[rule];
+              span.classList.add("is-invalid");
             }
             flag = 1;
           }
           break;
         case "length":
           if (field.value.length !== fieldRules[rule]) {
-             if(!span.classList.contains("is-invalid")){
-                span.textContent = "Invalid entry";
-                span.classList.add("is-invalid");
+            if (!span.classList.contains("is-invalid")) {
+              span.textContent = "Invalid entry";
+              span.classList.add("is-invalid");
             }
             flag = 1;
           }
@@ -59,19 +59,19 @@ class FormValidator {
           if (fieldRules[rule]) {
             let pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
             if (!pattern.test(field.value)) {
-                if(!span.classList.contains("is-invalid")){
+              if (!span.classList.contains("is-invalid")) {
                 span.textContent = "Email format is wrong";
                 span.classList.add("is-invalid");
-            }
+              }
               flag = 1;
             }
           }
           break;
         case "pattern":
           if (!fieldRules[rule].test(field.value)) {
-            if(!span.classList.contains("is-invalid")){
-                span.textContent = field.name + " Pattern mismatch";
-                span.classList.add("is-invalid");
+            if (!span.classList.contains("is-invalid")) {
+              span.textContent = field.name + " Pattern mismatch";
+              span.classList.add("is-invalid");
             }
             flag = 1;
           }
@@ -80,19 +80,19 @@ class FormValidator {
           let id = fieldRules[rule];
           let element = this.form.querySelector("#" + id);
           if (element.value != field.value) {
-            if(!span.classList.contains("is-invalid")){
-                span.textContent =
-              element.name + " and " + field.name + " missmatch";
-                span.classList.add("is-invalid");
+            if (!span.classList.contains("is-invalid")) {
+              span.textContent =
+                element.name + " and " + field.name + " missmatch";
+              span.classList.add("is-invalid");
             }
             flag = 1;
           }
           break;
         case "custom":
           if (!fieldRules[rule].fn(field.value)) {
-            if(!span.classList.contains("is-invalid")){
-                span.textContent = "Custom function thrown error";
-                span.classList.add("is-invalid");
+            if (!span.classList.contains("is-invalid")) {
+              span.textContent = "Custom function thrown error";
+              span.classList.add("is-invalid");
             }
             flag = 1;
           }
@@ -130,6 +130,10 @@ form.addEventListener("submit", (event) => {
   event.preventDefault();
   formValidator.validateAll();
 });
-form.addEventListener('blur',(event)=>{
+form.addEventListener(
+  "blur",
+  (event) => {
     formValidator.validate(event.target);
-},true); //blur will nt work on buble but works on capture
+  },
+  true,
+); //blur will nt work on buble but works on capture
