@@ -132,4 +132,4 @@ form.addEventListener("submit", (event) => {
 });
 form.addEventListener('blur',(event)=>{
     formValidator.validate(event.target);
-},true)
+},true); //blur will nt work on buble but works on capture
