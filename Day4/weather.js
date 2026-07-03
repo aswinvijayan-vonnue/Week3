@@ -116,7 +116,7 @@ if (payload) {
   display(payload);
 }
 function display(json) {
-  setSessionCache("weather", json, 60000);
+  setSessionCache("weather", json, 600000);
   console.log(json);
   const tempval = document.querySelector(".tempVal");
   const windval = document.querySelector(".wind-val");
