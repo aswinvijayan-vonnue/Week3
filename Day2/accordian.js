@@ -4,7 +4,7 @@ console.log(key);
 if (key != null && key >= 0) {
   const panel = buttons[key].nextElementSibling;
   panel.classList.add("active");
-  buttons[key].parentElement.setAttribute("aria-expanded", "true");
+  buttons[key].setAttribute("aria-expanded", "true");
 }
 buttons.forEach((button, index) => {
   button.addEventListener("click", function (event) {
@@ -12,7 +12,7 @@ buttons.forEach((button, index) => {
     console.log(index);
     panel.classList.toggle("active");
     const isopen = panel.classList.contains("active");
-    this.parentElement.setAttribute("aria-expanded", isopen);
+    this.setAttribute("aria-expanded", isopen);
     if (isopen) {
       sessionStorage.setItem("openat", index);
       console.log(`stored ${sessionStorage.getItem("openat")}`);
@@ -21,7 +21,7 @@ buttons.forEach((button, index) => {
     console.log(buttons.length);
     for (let i = 0; i < buttons.length; i++) {
       if (i != index) {
-        buttons[i].parentElement.setAttribute("aria-expanded", "false");
+        buttons[i].setAttribute("aria-expanded", "false");
         let body = buttons[i].nextElementSibling;
         body.classList.remove("active");
       }
