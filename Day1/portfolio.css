@@ -1,0 +1,58 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+header img {
+    width: 300px;
+    align-self: center;
+}
+header h1,header h2 {
+    font-size: 2em;
+}
+p{
+    font-size: 1.5em;
+}
+.img1 img {
+    width: 300px;
+    height: 300px;
+}
+.img2 img {
+     width: 300px;
+    height: 300px;
+}
+.featured {
+    margin: 2em;
+    grid-column: span 2;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+}
+.fproject {
+    display: flex;
+    gap: 2em;
+    margin-bottom: 3em;
+}
+.fproject h3,.nfproject h3 {
+    font-size: 1.6em;
+}
+.nfproject {
+    display: flex;
+    flex-direction: column;
+}
+.overlay {
+    background-color: rgb(243, 138, 138);
+    width: 15em;
+    border: 0.5px dashed rgb(239, 53, 53);
+    transition:width 2s;
+    
+}
+.overlay:hover {
+    width: 18em;
+    transform: rotateY(30deg);
+}
