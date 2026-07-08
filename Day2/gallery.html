@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./gallery.css">
+    <script src="./gallery.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Image Gallery</h1>
+    </header>
+    <div class="container">
+      
+      <button class="but prev" onclick="previmg()"><span>&ltrif;</span></button>
+      <img src="" alt="enlarged-image" class="enlargedImg">
+      <button class="but next" onclick="nextimg()"><span>&rtrif;</span></button>
+      <button class="close-but but" onclick="closeimg()"><span>&times;</span></button>
+    </div>
+    <main>
+      <h2>Section 1</h2>
+      <section class="section">
+        <figure>
+          <img src="https://picsum.photos/400/300?random=2" alt="sun rise" />
+          <figcaption>Fig.1 Sun rising over the ocean</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/400/300?random=5" alt="car logo" />
+          <figcaption>fig.2 Tata Car logo</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=6"
+            alt="Fog in a valley"
+          />
+          <figcaption>fig.3 Morning fog over the valley</figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=7"
+            alt="student with an umbrella"
+          />
+          <figcaption>
+            fig.4 A student walking across school varanda with an umbrella
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=8"
+            alt="Dog inside a cage"
+          />
+          <figcaption>
+            fig.5 A rescue dog waiting patiently inside a cage
+          </figcaption>
+        </figure>
+      </section>
+      <h2>Section 2</h2>
+      <section class="section">
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=9"
+            alt="A cup of coffee"
+          />
+          <figcaption>
+            fig.6 A warm cup of coffee sitting next to an open book
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=10"
+            alt="Wooden bench near to an seashore"
+          />
+          <figcaption>
+            fig.7 A wooden bench in a seashore in the early morning
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=11"
+            alt="traffic jam"
+          />
+          <figcaption>
+            fig.8 Traffic jam in Bengaluru in the late night
+          </figcaption>
+        </figure>
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=12"
+            alt="children playing"
+          />
+          <figcaption>
+            fig.9 Children playing in a grassy field in the evening
+          </figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/400/300?random=17" alt="tajmahal" />
+          <figcaption>fig.10 View of the tajmahal</figcaption>
+        </figure>
+      </section>
+      <h2>Section 3</h2>
+      <section class="section">
+        <figure>
+          <img
+            src="https://picsum.photos/400/300?random=14"
+            alt="Apple tree with lot of apples"
+          />
+          <figcaption>fig.11 Fresh apples hanging on apple tree</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/400/300?random=15" alt="rainbow" />
+          <figcaption>fig.12 Vibrant rainbow in the blue sky</figcaption>
+        </figure>
+        <figure>
+          <img src="https://picsum.photos/400/300?random=16" alt="lighthouse" />
+          <figcaption>fig.13 Lighthouse in Kannur</figcaption>
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/400/300?random=20" alt="" />
+            <figcaption>fig.14 Bike</figcaption>
+
+        </figure>
+        <figure>
+            <img src="https://picsum.photos/400/300?random=21" alt="" />
+            <figcaption>fig.15 Police</figcaption>
+        </figure>
+        <!--Purely decorative images are those images which are used only for aesthetic and doesnt have any meaning full information, for purely decorative images alt="" -->
+      </section>
+    </main>
+  </body>
+</html>
