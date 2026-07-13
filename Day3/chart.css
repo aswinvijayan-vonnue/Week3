@@ -1,0 +1,11 @@
+.chart-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    border-bottom: 1px solid black;
+    height: 600px;
+}
+.barChart{
+    border: solid black;
+    background-color: red;
+}
