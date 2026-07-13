@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./blog-comment.css" />
     <script src="./blog-comment.js" defer></script>
+    <script src="./mutation.js" type="module"></script>
     <title>Blog</title>
   </head>
   <body>
+    <div class="floating-container">
+      <div class="floating-panel">
+        <span class="floating-description">Div element added</span>
+        <button>Close</button>
+      </div>
+    </div>
     <div class="scrollbar-container">
-        <div class="scrollbar"></div>
+      <div class="scrollbar"></div>
     </div>
     <div class="backto-top-container">
-        <button class="back-to-top" onclick="moveTop(event)">Back to top</button>
+      <button class="back-to-top" onclick="moveTop(event)">Back to top</button>
     </div>
     <header>
       <h1>Multi-Article Blog</h1>
@@ -230,7 +237,6 @@
             <p>Author: <span>Greta Latchford</span></p>
             <p>Category: <a href="#">The Mind</a></p>
           </footer>
-          
         </article>
       </div>
       <div class="aside">
@@ -259,23 +265,24 @@
     </main>
     <div class="comment-section">
       <div class="put-comment">
-      <h3>Leave a comment</h3>
-      <form action="" id="comment-form">
-        <input type="text" id="name" name="name" placeholder="Your Name">
-        <textarea name="comment" id="comment" placeholder="Leave your comment here..."></textarea>
-        <input type="submit" id="submit">
-      </form>
+        <h3>Leave a comment</h3>
+        <form action="" id="comment-form">
+          <input type="text" id="name" name="name" placeholder="Your Name" />
+          <textarea
+            name="comment"
+            id="comment"
+            placeholder="Leave your comment here..."
+          ></textarea>
+          <input type="submit" id="submit" />
+        </form>
       </div>
       <div class="display-comment">
         <details class="comment-section">
           <summary>Comments</summary>
           <ul class="comments">
-            <li class="single-comment">
-
-            </li>
+            <li class="single-comment"></li>
           </ul>
         </details>
-
       </div>
     </div>
     <footer id="contact" class="contact">

@@ -235,3 +235,37 @@ nav a:hover {
 .count{
   color: black;
 }
+.floating-container{
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.7);
+  z-index: 999;
+}
+.floating-panel{
+  background-color: beige;
+  font-size: 32px;
+  font-weight: 700;
+  min-width: 600px;
+  min-height: 400px;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.floating-panel button{
+  width: 100px;
+  height: 50px;
+  border: 1px solid rgba(0,0,0,0.7);
+  border-radius: 999px;
+}
+.floating-container-visible{
+  display: flex;
+}
