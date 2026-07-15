@@ -1,0 +1,146 @@
+*{
+    box-sizing: border-box;
+}
+.submit-button{
+    width: 48px;
+    height: 48px;
+    border-radius: 6px;
+    border-style: none;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.input-form{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+.input{
+    width: 50%;
+    height: 48px;
+    border-radius: 10px;
+    border-style: none;
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.input::placeholder{
+    text-align: center;
+    font-size: 20px;
+}
+.search{
+    font-weight: 400;
+    width: 28px;
+}
+.gitHub{
+    margin: 8px 8.5px 0px 8.5px;
+    padding: 0px 32px;
+    font-size: 14px;
+    background-color: rgb(13, 17, 23);
+    color: rgb(240, 246, 252);
+    display: none;
+    gap: 24px;
+}
+.visible{
+    display: flex;
+}
+.side-bar{
+    width: 296px;
+}
+.main-area{
+    flex: 1;
+}
+.header-card{
+    margin-top: 32px;
+
+}
+.avatar{
+    border-radius: 50%;
+    width: 260px;
+    height: auto;
+}
+.name-area{
+    padding: 16px 0px;
+}
+.uname{
+    color: rgb(145,152,161);
+    display: block;
+    font-size: 20px;
+    font-weight: 300;
+}
+.followers-following-area{
+    margin-bottom: 16px;
+    display: flex;
+    gap: 8px;
+}
+.numbering{
+    font-weight: 600;
+}
+.followers,.following{
+    display: flex;
+    gap: 6px;
+}
+.top-repo-container{
+    margin-top: 24px;
+}
+.popular-repo{
+    font-size: 16px;
+    font-weight: 400;
+}
+.repo-list{
+    margin:0px -8px 24px -8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.repo-list li{
+    padding: 0px 8px;
+    display: flex;
+    margin-bottom: 16px;
+    width: 50%;
+    list-style: none;
+}
+.single-project{
+    padding: 16px;
+    border: 1px solid rgb(61,68,77);
+    border-radius: 6px;
+    display: flex;
+    width: 100%;
+
+}
+.single-project-details{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.project-name{
+    margin-right: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+.description{
+    margin: 8px 0px 16px 0px;
+    color: rgb(145,152,161);
+    font-size: 12px;
+    font-size: 400;
+}
+.language{
+    display: flex;
+    gap: 12px;
+}
+.star-count{
+    display: flex;
+    gap: 3px;
+}
+.octicon{
+    height: 16px;
+    width: 16px;
+    fill: rgb(145, 152, 161);
+    
+}
+ol{
+    padding: 0;
+}
+.bioAndLocation{
+    display: flex;
+    column-gap: 16px;
+}
+.error{
+    color: red;
+    font-size: 20px;
+}
