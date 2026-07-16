@@ -1,0 +1,27 @@
+.cart div {
+  width: 800px;
+  min-height: 200px;
+  margin: 10px;
+  font-size: 2em;
+}
+form {
+    display: none;
+    flex-direction: column;
+}
+form input {
+    height: 40px;
+    font-size: 20px;
+}
+form label {
+    font-size: 28px;
+}
+.visible{
+    display: flex;
+}
+.itemlist{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    background-color: beige;
+    margin: 10px;
+}
