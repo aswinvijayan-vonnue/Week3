@@ -1,17 +1,53 @@
-.container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
 }
-.card{
-    min-width: 800px;
-    min-height: 900px;
-    border: 1px solid black;
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 64px;
+.card {
+  min-width: 800px;
+  min-height: 900px;
+  border: 1px solid black;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 64px;
+  will-change: transform;
+}
+.progress-container {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+.progress-bar {
+  width: 0%;
+  height: 20px;
+  border-radius: 10px;
+  background-color: black;
+  transition: width 0.1s linear;
+}
+
+.card1{
+    position: relative;
+    animation: box1 infinite 1s;
+}
+.card2{
+    animation: box2 infinite 1s;
+}
+@keyframes box1 {
+    0%{
+        top:100vh;
+    }
+    100%{
+        top: 0;
+    }
+}
+@keyframes box2 {
+    100%{
+        transform: translateY(100%);
+    }
+    
 }
