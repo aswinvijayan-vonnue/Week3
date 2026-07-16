@@ -1,0 +1,13 @@
+.show-error {
+  display: none;
+  font-size: 25px;
+  padding-left: 2em;
+}
+.is-invalid {
+  color: red;
+  display: inline;
+}
+.is-valid {
+  color: green;
+  display: inline;
+}
